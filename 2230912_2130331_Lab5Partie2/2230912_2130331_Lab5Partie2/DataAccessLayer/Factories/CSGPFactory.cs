@@ -22,7 +22,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// </summary>
         /// <param name="idProf"></param>
         /// <returns></returns>
-        private Cours_session_groupe_prof GetCoursSelonEnseignant(int idProf)
+        private Cours_session_groupe_prof[] GetCoursSelonEnseignant(int idProf)
         {
             List<Cours_session_groupe_prof> cSGP = new List<Cours_session_groupe_prof>();
             MySqlConnection mySqlCnn = null;
