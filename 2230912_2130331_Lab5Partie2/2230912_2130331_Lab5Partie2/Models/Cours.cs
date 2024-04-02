@@ -8,6 +8,30 @@
         /// </summary>
         public string  CodeCours { get; set; }
 
-        
+        /// <summary>
+        /// Titre du cours
+        /// </summary>
+        public string TitreCours { get; set; }
+
+
+        /// <summary>
+        /// Durée du cours
+        /// </summary>
+        public double DureeCours { get; set; }  
+
+
+        //Constructeur vide requis pour la désérialisation
+
+        public Cours()
+        { 
+
+        }
+
+        public Cours (string codeCours, string titreCours, double dureeCours)
+        {
+            CodeCours = codeCours;
+            TitreCours = titreCours;
+            DureeCours = dureeCours;
+        }   
     }
 }
