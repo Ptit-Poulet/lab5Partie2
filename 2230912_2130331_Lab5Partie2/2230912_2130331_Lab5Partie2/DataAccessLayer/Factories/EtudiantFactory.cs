@@ -6,14 +6,18 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 {
     public class EtudiantFactory : FactoryBase
     {
-        //private etudiant CreateFromReader(MySqlDataReader mySqlDataReader)
-        //{
-        //    //int id = (int)mySqlDataReader["Id"];
-        //    //string code = mySqlDataReader["Code"].ToString();
-        //    //string name = mySqlDataReader["Name"].ToString();
-        //    //short qtyInStock = (short)mySqlDataReader["QuantityInStock"];
+        private Etudiant CreateFromReader(MySqlDataReader mySqlDataReader)
+        {
+            string codePermanent = mySqlDataReader["etu_code_permanent"].ToString();
+            string nom = mySqlDataReader["etu_nom"].ToString();
+            string prenom = mySqlDataReader["etu_prenom"].ToString();
+            string DateNaissance = mySqlDataReader["etu_date_naissance"].ToString();
+            string DateInscription = mySqlDataReader["etu_date_inscription"].ToString();
+            string DateDiplome = mySqlDataReader["etu_date_diplome"].ToString();
+            int DA = (int)mySqlDataReader["etu_date_diplome"];
 
-        //   //return new Product(id, code, name, qtyInStock);
-        //}
+
+            return new Etudiant(codePermanent, nom, prenom, DateNaissance, DateInscription, DateDiplome, DA);
+        }
     }
 }

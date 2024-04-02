@@ -32,7 +32,7 @@
         /// <summary>
         /// Numéro de DA
         /// </summary>
-        public string etu_num_da { get; set; }
+        public int etu_num_da { get; set; }
         /// <summary>
         /// Constructeur vide pour désérialiisation
         /// </summary>
@@ -50,7 +50,7 @@
         /// <param name="etu_date_inscription"></param>
         /// <param name="etu_date_diplome"></param>
         /// <param name="etu_num_da"></param>
-        public Etudiant(string etu_code_permanent, string etu_nom, string etu_prenom, string etu_date_naissance, string etu_date_inscription, string etu_date_diplome, string etu_num_da)
+        public Etudiant(string etu_code_permanent, string etu_nom, string etu_prenom, string etu_date_naissance, string etu_date_inscription, string etu_date_diplome, int etu_num_da)
         {
             this.etu_code_permanent = etu_code_permanent;
             this.etu_nom = etu_nom;
