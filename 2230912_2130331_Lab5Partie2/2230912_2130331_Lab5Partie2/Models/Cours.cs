@@ -17,7 +17,7 @@
         /// <summary>
         /// Durée du cours
         /// </summary>
-        public double DureeCours { get; set; }  
+        public int DureeCours { get; set; }  
 
 
         //Constructeur vide requis pour la désérialisation
