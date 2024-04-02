@@ -443,11 +443,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "P:\\HIV24\\SERVICE DE DONNÉES\\tp5_partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj",
       "projectName": "2230912_2130331_Lab5Partie2",
       "projectPath": "P:\\HIV24\\SERVICE DE DONNÉES\\tp5_partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj",
       "packagesPath": "C:\\Users\\2130331\\.nuget\\packages\\",
       "outputPath": "P:\\HIV24\\SERVICE DE DONNÉES\\tp5_partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\obj\\",
+=======
+      "projectUniqueName": "P:\\session 4\\Intro Services de Données\\2230912_Lab5\\2230912_Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj",
+      "projectName": "2230912_2130331_Lab5Partie2",
+      "projectPath": "P:\\session 4\\Intro Services de Données\\2230912_Lab5\\2230912_Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj",
+      "packagesPath": "C:\\Users\\2230912\\.nuget\\packages\\",
+      "outputPath": "P:\\session 4\\Intro Services de Données\\2230912_Lab5\\2230912_Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\obj\\",
+>>>>>>> ca88d129ebf0d18f8e0c664f645126ada81485cf
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

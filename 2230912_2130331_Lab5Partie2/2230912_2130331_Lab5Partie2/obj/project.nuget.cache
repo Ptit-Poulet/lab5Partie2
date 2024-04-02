@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "5lhOWU5xjyPQougO5+zK9Ur9wMtW1ooECShHdOdAncnkxrxnQ7sjlVGTbXFW+BC8NvVqtFSnr8DiZv/TOCENYg==",
   "success": true,
   "projectFilePath": "P:\\HIV24\\SERVICE DE DONNÉES\\tp5_partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj",
+=======
+  "dgSpecHash": "KznyuG8xpIkshFlqbboPXIHOOBA98jOb3gEQqiqePlgUlnsbDZeW6wdnuJ6LZz30dPIucu5TBy875XX3/qnTZQ==",
+  "success": true,
+  "projectFilePath": "P:\\session 4\\Intro Services de Données\\2230912_Lab5\\2230912_Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj",
+>>>>>>> ca88d129ebf0d18f8e0c664f645126ada81485cf
   "expectedPackageFiles": [
     "C:\\Users\\2130331\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\2130331\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
