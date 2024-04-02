@@ -27,7 +27,7 @@
 
         }
 
-        public Cours (string codeCours, string titreCours, double dureeCours)
+        public Cours (string codeCours, string titreCours, int dureeCours)
         {
             CodeCours = codeCours;
             TitreCours = titreCours;
