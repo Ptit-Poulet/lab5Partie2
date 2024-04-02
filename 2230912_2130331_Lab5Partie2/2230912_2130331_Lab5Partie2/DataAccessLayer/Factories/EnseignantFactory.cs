@@ -1,9 +1,10 @@
-﻿using _2230912_2130331_Lab5Partie2.Models;
+﻿using _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories.Base;
+using _2230912_2130331_Lab5Partie2.Models;
 using MySql.Data.MySqlClient;
 
 namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 {
-    public class EnseignantFactory
+    public class EnseignantFactory : FactoryBase
     {
         private Enseignant CreateFromReader(MySqlDataReader mySqlDataReader)
         {

@@ -8,12 +8,60 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
     {
         private Etudiant CreateFromReader(MySqlDataReader mySqlDataReader)
         {
-            int id = (int)mySqlDataReader["Id"];
-            string code = mySqlDataReader["Code"].ToString();
-            string name = mySqlDataReader["Name"].ToString();
-            short qtyInStock = (short)mySqlDataReader["QuantityInStock"];
 
-            return new Product(id, code, name, qtyInStock);
+            string codePermanent = mySqlDataReader["etu_code_permanent"].ToString();
+            string nom = mySqlDataReader["etu_nom"].ToString();
+            string prenom = mySqlDataReader["etu_prenom"].ToString();
+            string DateNaissance = mySqlDataReader["etu_date_naissance"].ToString();
+            string DateInscription = mySqlDataReader["etu_date_inscription"].ToString();
+            string DateDiplome = mySqlDataReader["etu_date_diplome"].ToString();
+            int DA = (int)mySqlDataReader["etu_date_diplome"];
+
+
+            return new Etudiant(codePermanent, nom, prenom, DateNaissance, DateInscription, DateDiplome, DA);
+
+        }
+
+        /// <summary>
+        /// Retourner la liste des finissants pour une année donnée
+        /// </summary>
+        /// <param name="DateDiplome"></param>
+        /// <returns></returns>
+        public Etudiant[] GetEtudiantSelonDateDiplome(string DateDiplome)
+        {
+            List<Etudiant> etudiant = new List<Etudiant>();
+            MySqlConnection mySqlCnn = null;
+            try
+            {
+                mySqlCnn = new MySqlConnection(CnnStr);
+                mySqlCnn.Open();
+
+                using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
+                {
+                    mySqlCmd.CommandText = "SELECT etu_nom, etu_prenom FROM tp5_etudiant WHERE etu_date_diplome = @DateDiplome";
+                    mySqlCmd.Parameters.AddWithValue("@DateDiplome", DateDiplome);
+
+                    using(MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
+                    {
+                        if (mySqlDataReader.Read())
+                        {
+                            etudiant.Add(CreateFromReader(mySqlDataReader));
+                        }
+
+                        mySqlDataReader.Close();
+                    }
+
+                }
+            }
+            finally
+            {
+                if (mySqlCnn != null)
+                {
+                    mySqlCnn.Close();
+                }
+            }
+
+            return etudiant.ToArray();
         }
     }
 }

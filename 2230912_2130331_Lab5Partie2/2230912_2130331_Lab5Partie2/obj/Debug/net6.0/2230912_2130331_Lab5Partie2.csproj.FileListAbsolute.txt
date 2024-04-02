@@ -19,8 +19,12 @@ P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2
 P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\System.Security.Permissions.dll
 P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\System.Text.Json.dll
+P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\2230912_2130331_Lab5Partie2.csproj.AssemblyReference.cache
 P:\HIV24\SERVICE DE DONNÉES\tp5_partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\2230912_2130331_Lab5Partie2.GeneratedMSBuildEditorConfig.editorconfig
