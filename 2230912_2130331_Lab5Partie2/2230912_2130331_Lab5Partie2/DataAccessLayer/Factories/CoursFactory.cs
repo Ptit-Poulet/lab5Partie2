@@ -1,6 +1,7 @@
 ﻿using _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories.Base;
 using _2230912_2130331_Lab5Partie2.Models;
 using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 
 namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 {
@@ -116,6 +117,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
             return listCours;
         }
+<<<<<<< HEAD
 
 
 
@@ -152,6 +154,33 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                     }
 
                 }
+=======
+        
+        /// <summary>
+        /// Permettre de créer un nouveau cours
+        /// </summary>
+        /// <param name="sigle"></param>
+        /// <param name="titre"></param>
+        /// <param name="duree"></param>
+        public void AddCours(string sigle, string titre, int duree)
+        {
+            MySqlConnection mySqlCnn = null;
+            try
+            {
+                using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
+                {
+                    mySqlCmd.CommandText = "INSERT INTO h24_web_transac_2230912.tp5_cours(cou_sigle,cou_titre, cou_duree) " +
+                        "VALUEs(@Sigle, @Titre, @Duree); " +
+                        "INSERT INTO  h24_web_transac_2230912.tp5_cours_session_groupe_prof(csgp_sigle_cours, csgp_id_session, csgp_groupe, csgp_id_prof) " +
+                        "VALUES(@Sigle, 0, 0, 0)";
+
+
+                    mySqlCmd.Parameters.AddWithValue("@Sigle", sigle);
+                    mySqlCmd.Parameters.AddWithValue("@Titre", titre);
+                    mySqlCmd.Parameters.AddWithValue("@Duree", duree);
+                }
+
+>>>>>>> 6b430f3ae0d686aa55fc038d52426a330b687201
             }
             finally
             {
@@ -160,8 +189,13 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                     mySqlCnn.Close();
                 }
             }
+<<<<<<< HEAD
 
             return listCoursEnseignant;
         }
     }
+=======
+        }
+>>>>>>> 6b430f3ae0d686aa55fc038d52426a330b687201
     }
+}
