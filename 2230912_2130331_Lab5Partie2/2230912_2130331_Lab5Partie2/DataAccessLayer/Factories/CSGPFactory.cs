@@ -1,6 +1,7 @@
 ﻿using _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories.Base;
 using _2230912_2130331_Lab5Partie2.Models;
 using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 
 namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 {
@@ -141,6 +142,38 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                 }
             }
 
+        }
+        /// <summary>
+        /// Permet de modifier l'enseignant associé à un cours
+        /// </summary>
+        /// <param name="idEnseignant"></param>
+        /// <param name="idCours"></param>
+        public void ModifEnseignantCours(int idEnseignant, int idCours)
+        {
+            MySqlConnection mySqlCnn = null;
+            try
+            {
+                mySqlCnn = new MySqlConnection(CnnStr);
+                mySqlCnn.Open();
+
+                using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
+                {
+                    mySqlCmd.CommandText = "UPDATE h24_web_transac_2230912.tp5_cours_session_groupe_prof " +
+                        "SET csgp_id_prof = @idProf" +
+                        "WHERE csgp_id = @idCours";
+
+                    mySqlCmd.Parameters.AddWithValue("@idProf", idEnseignant);
+                    mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
+
+                }
+            }
+            finally
+            {
+                if (mySqlCnn != null)
+                {
+                    mySqlCnn.Close();
+                }
+            }
         }
     }
 }

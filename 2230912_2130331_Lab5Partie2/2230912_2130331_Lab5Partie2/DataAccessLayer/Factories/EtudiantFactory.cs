@@ -8,7 +8,6 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
     {
         private Etudiant CreateFromReader(MySqlDataReader mySqlDataReader)
         {
-<<<<<<< HEAD
 
             string codePermanent = mySqlDataReader["etu_code_permanent"].ToString();
             string nom = mySqlDataReader["etu_nom"].ToString();
@@ -63,18 +62,6 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
             }
 
             return etudiant.ToArray();
-=======
-            string codePermanent = mySqlDataReader["etu_code_permanent"].ToString();
-            string nom = mySqlDataReader["etu_nom"].ToString();
-            string prenom = mySqlDataReader["etu_prenom"].ToString();
-            string DateNaissance = mySqlDataReader["etu_date_naissance"].ToString();
-            string DateInscription = mySqlDataReader["etu_date_inscription"].ToString();
-            string DateDiplome = mySqlDataReader["etu_date_diplome"].ToString();
-            int DA = (int)mySqlDataReader["etu_date_diplome"];
-
-
-            return new Etudiant(codePermanent, nom, prenom, DateNaissance, DateInscription, DateDiplome, DA);
->>>>>>> 25404073853b15fa8d9c392e4f75b4357c78f82c
         }
 
         /// <summary>
@@ -125,14 +112,16 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         }
 
         /// <summary>
-        /// Permettre de désinscrire un étudiant à un cours
+        /// Permet de vérifier la présence d'un étudiant
         /// </summary>
-        /// <param name="id"></param>
-
-        public void DeleteEtudiantCours(string codePermanent, string sigleCours)
+        /// <param name="codePermanent"></param>
+        /// <returns></returns>
+        public bool GetEtudiant(string codePermanent)
         {
-            MySqlConnection mySqlCnn = null;
 
+            Etudiant etudiant = new Etudiant();
+            bool EstPresent = false;
+            MySqlConnection mySqlCnn = null;
             try
             {
                 mySqlCnn = new MySqlConnection(CnnStr);
@@ -140,10 +129,20 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
-                    mySqlCmd.CommandText = "La bonne requêtte DELETE à faire";
+                    mySqlCmd.CommandText = "SELECT * FROM h24_web_transac_2230912.tp5_etudiant WHERE etu_codepermanent = @codePermanent";
+
                     mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
-                    mySqlCmd.Parameters.AddWithValue("@sigleCours", sigleCours);
-                    mySqlCmd.ExecuteNonQuery();
+
+                    using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
+                    {
+                        if (mySqlDataReader.Read())
+                        {
+                            EstPresent = true;
+                        }
+
+                        mySqlDataReader.Close();
+                    }
+
                 }
             }
             finally
@@ -153,6 +152,39 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                     mySqlCnn.Close();
                 }
             }
+
+            return EstPresent;
         }
+
+        ///// <summary>
+        ///// Permettre de désinscrire un étudiant à un cours
+        ///// </summary>
+        ///// <param name="id"></param>
+
+        //public void DeleteEtudiantCours(string codePermanent, string sigleCours)
+        //{
+        //    MySqlConnection mySqlCnn = null;
+
+        //    try
+        //    {
+        //        mySqlCnn = new MySqlConnection(CnnStr);
+        //        mySqlCnn.Open();
+
+        //        using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
+        //        {
+        //            mySqlCmd.CommandText = "La bonne requêtte DELETE à faire";
+        //            mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
+        //            mySqlCmd.Parameters.AddWithValue("@sigleCours", sigleCours);
+        //            mySqlCmd.ExecuteNonQuery();
+        //        }
+        //    }
+        //    finally
+        //    {
+        //        if (mySqlCnn != null)
+        //        {
+        //            mySqlCnn.Close();
+        //        }
+        //    }
+        //}
     }
 }
