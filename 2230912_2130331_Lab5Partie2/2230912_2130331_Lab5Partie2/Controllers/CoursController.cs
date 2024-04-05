@@ -48,5 +48,18 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             return dal.CoursFact.GetHistoriqueCoursEtudiant(codePermanent);
         }
 
+
+        /// <summary>
+        /// retourner la liste des cours enseignés par un enseignant donné
+        /// </summary>
+        /// <param name="idProf"></param>
+        /// <returns></returns>
+        [HttpGet("[action]")]
+        public ActionResult<IEnumerable<Cours>> GetListCoursSelonEnseignant(int idProf)
+        {
+            DAL dal = new DAL();
+            return dal.CoursFact.GetListCoursSelonEnseignant(idProf);
+        }
+
     }
 }
