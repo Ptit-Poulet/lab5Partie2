@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bgJ2PT6iW1JapSDD4Ovf0YRt9wC6O3CoqGpGjdmsmSRYtkm/+PXJxgpa4XvDLyqwK5uUUsJ57O8zVckc2M2tYg==",
+  "dgSpecHash": "+NO31WGXbfddfle+MkcfnvLYaq10k2DdKcP3asXDjtFxm7t+kxKKJfme6yWZUE2Isx10YeTCTBQoNt6zzoB5/g==",
   "success": true,
-  "projectFilePath": "P:\\session 4\\Intro Services de Données\\2230912_Lab5\\2230912_Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj",
+  "projectFilePath": "C:\\Users\\2230912\\Desktop\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\2230912\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\2230912\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
@@ -31,5 +31,12 @@
     "C:\\Users\\2230912\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\2230912\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Users\\2230912\\Desktop\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
