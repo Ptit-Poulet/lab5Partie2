@@ -16,7 +16,7 @@
         /// <summary>
         /// Code permanent
         /// </summary>
-        public string ecsgp__etu_codepermanent { get; set; }
+        public string ecsgp_etu_codepermanent { get; set; }
         /// <summary>
         /// Resultat
         /// </summary>
@@ -36,11 +36,11 @@
         /// <param name="ecsgp_csp_id"></param>
         /// <param name="ecsgp__etu_codepermanent"></param>
         /// <param name="ecsgp_resultat"></param>
-        public Etudiant_coursesessiongroupeprof(int ecsgp_id, int ecsgp_csp_id, string ecsgp__etu_codepermanent, int ecsgp_resultat)
+        public Etudiant_coursesessiongroupeprof(int ecsgp_id, int ecsgp_csp_id, string ecsgp_etu_codepermanent, int ecsgp_resultat)
         {
             this.ecsgp_id = ecsgp_id;
             this.ecsgp_csp_id = ecsgp_csp_id;
-            this.ecsgp__etu_codepermanent = ecsgp__etu_codepermanent;
+            this.ecsgp_etu_codepermanent = ecsgp_etu_codepermanent;
             this.ecsgp_resultat = ecsgp_resultat;
         }
     }

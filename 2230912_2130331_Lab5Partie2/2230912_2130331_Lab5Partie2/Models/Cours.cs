@@ -6,7 +6,7 @@
         /// <summary>
         /// Code du cours 
         /// </summary>
-        public string  CodeCours { get; set; }
+        public string  SigleCours { get; set; }
 
         /// <summary>
         /// Titre du cours
@@ -27,9 +27,9 @@
 
         }
 
-        public Cours (string codeCours, string titreCours, int dureeCours)
+        public Cours (string sigleCours, string titreCours, int dureeCours)
         {
-            CodeCours = codeCours;
+            SigleCours = sigleCours;
             TitreCours = titreCours;
             DureeCours = dureeCours;
         }   
