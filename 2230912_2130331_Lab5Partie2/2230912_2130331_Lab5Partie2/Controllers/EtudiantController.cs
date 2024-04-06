@@ -14,13 +14,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
     [Route("[controller]")]
     public class EtudiantController : ControllerBase
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-
-
-
+        
         /// <summary>
         /// retourner la liste des étudiants inscrits à un cours donné
         /// </summary>
@@ -93,6 +87,21 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             {
                 return StatusCode(500, $"Une erreur s'est produite lors de la modification d'un de l'étudiant à un cours : {ex.Message}");
             }
+        }
+
+
+        /// <summary>
+        /// Retourner la liste des finissants pour une année donnée
+        /// </summary>
+        /// <param name="DateDiplome"></param>
+        /// <returns></returns>
+
+        [HttpGet("[action]")]
+        public ActionResult<IEnumerable<Etudiant>> GetEtudiantSelonDateDiplome(string DateDiplome)
+        {
+            DAL dal = new DAL();
+
+            return dal.EtudiantFact.GetEtudiantSelonDateDiplome(DateDiplome);
         }
     }
 }

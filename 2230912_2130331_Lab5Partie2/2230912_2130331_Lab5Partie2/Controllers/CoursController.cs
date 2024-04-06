@@ -46,7 +46,6 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
 
             return dal.CoursFact.GetHistoriqueCoursEtudiant(codePermanent);
         }
-
         /// <summary>
         /// Ajoute un nouveau cours avec son sigle, son titre et sa durée
         /// </summary>
@@ -127,5 +126,20 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
                 return StatusCode(500, $"Une erreur s'est produite lors de la suppression d'un étudiant du cours : {ex.Message}");
             }
         }
+
+
+        /// <summary>
+        /// retourner la liste des cours enseignés par un enseignant donné
+        /// </summary>
+        /// <param name="idProf"></param>
+        /// <returns></returns>
+        [HttpGet("[action]")]
+        public ActionResult<IEnumerable<Cours>> GetListCoursSelonEnseignant(int idProf)
+        {
+            DAL dal = new DAL();
+            return dal.CoursFact.GetListCoursSelonEnseignant(idProf);
+        }
+
+
     }
 }
