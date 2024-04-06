@@ -4,7 +4,6 @@ using _2230912_2130331_Lab5Partie2.Models;
 using _2230912_2130331_Lab5Partie2.DataAccessLayer;
 using _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories;
 using Microsoft.AspNetCore.Http;
-
 using Microsoft.AspNetCore.Mvc;
 
 namespace _2230912_2130331_Lab5Partie2.Controllers
@@ -26,7 +25,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// </summary>
         /// <param name="codePermanent"></param>
         /// <returns></returns>
-        [HttpGet("[action]")] 
+        [HttpGet("[action]")]
         public ActionResult<IEnumerable<Cours>> GetListCoursEtudian(string codePermanent)
         {
             DAL dal = new DAL();
@@ -48,5 +47,85 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             return dal.CoursFact.GetHistoriqueCoursEtudiant(codePermanent);
         }
 
+        /// <summary>
+        /// Ajoute un nouveau cours avec son sigle, son titre et sa durée
+        /// </summary>
+        /// <param name="sigle"></param>
+        /// <param name="titre"></param>
+        /// <param name="duree"></param>
+        /// <returns></returns>
+        [HttpPost("[action]")]
+        public ActionResult<IEnumerable<Cours>> AjouterUnCours(string sigle, string titre, int duree)
+        {
+            DAL dal = new DAL();
+
+            try
+            {
+                dal.CoursFact.AddCours(sigle, titre, duree);
+                return Ok("Le cours a été ajouté avec succès.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors de l'ajout du cours : {ex.Message}");
+            }
+        }
+        /// <summary>
+        /// Modifie l'enseignant qui est affecté à un cours
+        /// </summary>
+        /// <param name="idEnseignant"></param>
+        /// <param name="idCours"></param>
+        /// <returns></returns>
+        [HttpPut("[action]")]
+        public ActionResult<IEnumerable<Cours>> ModifiEnseignantCours(int idEnseignant, int idCours)
+        {
+            DAL dal = new DAL();
+
+            try
+            {
+                bool existe = dal.CSGPFact.GetCours(idCours);
+
+                if (existe)
+                {
+                    dal.CSGPFact.ModifEnseignantCours(idEnseignant, idCours);
+                    return Ok("L'enseignant a été modifié avec succès.");
+
+                }
+                return StatusCode(404, "Le cours n'existe pas.");
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors de la modification d'un enseignant du cours : {ex.Message}");
+            }
+        }
+
+        [HttpDelete("[action]")]
+        public ActionResult<IEnumerable<Cours>> EneleverEtudiantDansUnCours(string codePermanent, int idCours)
+        {
+            DAL dal = new DAL();
+
+            try
+            {
+                bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
+                bool existe = dal.CSGPFact.GetCours(idCours);
+                if (estPresent)
+                {
+                    if (existe)
+                    {
+                        dal.ECSGPFact.SupprEtudiantCours(codePermanent, idCours);
+                        return Ok("L'étudiant a été enlevé avec succès.");
+
+                    }
+                    return StatusCode(404, "Le cours n'existe pas.");
+
+                }
+                return StatusCode(404, "L'étudiant n'existe pas.");
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors de la suppression d'un étudiant du cours : {ex.Message}");
+            }
+        }
     }
 }

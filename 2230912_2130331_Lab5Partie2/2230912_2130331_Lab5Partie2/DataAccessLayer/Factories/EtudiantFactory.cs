@@ -129,7 +129,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
-                    mySqlCmd.CommandText = "SELECT * FROM h24_web_transac_2230912.tp5_etudiant WHERE etu_codepermanent = @codePermanent";
+                    mySqlCmd.CommandText = "SELECT * FROM h24_web_transac_2230912.tp5_etudiant WHERE etu_code_permanent = @codePermanent";
 
                     mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
 
@@ -156,35 +156,5 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
             return EstPresent;
         }
 
-        ///// <summary>
-        ///// Permettre de désinscrire un étudiant à un cours
-        ///// </summary>
-        ///// <param name="id"></param>
-
-        //public void DeleteEtudiantCours(string codePermanent, string sigleCours)
-        //{
-        //    MySqlConnection mySqlCnn = null;
-
-        //    try
-        //    {
-        //        mySqlCnn = new MySqlConnection(CnnStr);
-        //        mySqlCnn.Open();
-
-        //        using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
-        //        {
-        //            mySqlCmd.CommandText = "La bonne requêtte DELETE à faire";
-        //            mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
-        //            mySqlCmd.Parameters.AddWithValue("@sigleCours", sigleCours);
-        //            mySqlCmd.ExecuteNonQuery();
-        //        }
-        //    }
-        //    finally
-        //    {
-        //        if (mySqlCnn != null)
-        //        {
-        //            mySqlCnn.Close();
-        //        }
-        //    }
-        //}
     }
 }

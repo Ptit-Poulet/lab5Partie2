@@ -79,6 +79,9 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
             MySqlConnection mySqlCnn = null;
             try
             {
+                mySqlCnn = new MySqlConnection(CnnStr);
+                mySqlCnn.Open();
+
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
                     mySqlCmd.CommandText = "SELECT csgp_sigle_cours, se_identification, cou_titre FROM gestionpedagogique.tp5_session as s " +
@@ -113,7 +116,8 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
             return listCours;
         }
-        
+
+       
         /// <summary>
         /// Permettre de créer un nouveau cours
         /// </summary>
@@ -125,6 +129,9 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
             MySqlConnection mySqlCnn = null;
             try
             {
+                mySqlCnn = new MySqlConnection(CnnStr);
+                mySqlCnn.Open();
+
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
                     mySqlCmd.CommandText = "INSERT INTO h24_web_transac_2230912.tp5_cours(cou_sigle,cou_titre, cou_duree) " +

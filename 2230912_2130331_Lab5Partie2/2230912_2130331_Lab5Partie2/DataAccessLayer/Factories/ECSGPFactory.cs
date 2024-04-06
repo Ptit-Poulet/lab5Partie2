@@ -24,7 +24,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// </summary>
         /// <param name="codePermanent"></param>
         /// <returns></returns>
-        public Etudiant_coursesessiongroupeprof[] GetResultatSelonetudiant(string codePermanent)
+        public Etudiant_coursesessiongroupeprof[] GetResultatSelonEtudiant(string codePermanent)
         {
             List<Etudiant_coursesessiongroupeprof> eCSGP = new List<Etudiant_coursesessiongroupeprof>();
             MySqlConnection mySqlCnn = null;
