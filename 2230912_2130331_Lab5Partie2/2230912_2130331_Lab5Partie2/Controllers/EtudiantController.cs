@@ -4,12 +4,13 @@ using _2230912_2130331_Lab5Partie2.Models;
 using _2230912_2130331_Lab5Partie2.DataAccessLayer;
 using _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories;
 using Microsoft.AspNetCore.Http;
-
+using _2230912_2130331_Lab5Partie2.Attributes;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
+    [ApiKey]
     [ApiController]
     [Route("[controller]")]
     public class EtudiantController : ControllerBase
