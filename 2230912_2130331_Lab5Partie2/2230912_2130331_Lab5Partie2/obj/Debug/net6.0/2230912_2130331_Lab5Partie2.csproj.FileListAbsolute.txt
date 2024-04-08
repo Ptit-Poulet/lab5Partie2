@@ -85,7 +85,6 @@ C:\Users\2130331\Downloads\lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2
 C:\Users\2130331\Downloads\lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\2230912_2130331_Lab5Partie2.pdb
 C:\Users\2130331\Downloads\lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\2230912_2130331_Lab5Partie2.genruntimeconfig.cache
 C:\Users\2130331\Downloads\lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\ref\2230912_2130331_Lab5Partie2.dll
-C:\Users\2130331\Downloads\lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\2230912_2130331_Lab5Partie2.csproj.CopyComplete
 C:\Users\Utilisateur\OneDrive\Bureau\Coding\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Utilisateur\OneDrive\Bureau\Coding\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\appsettings.json
 C:\Users\Utilisateur\OneDrive\Bureau\Coding\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\bin\Debug\net6.0\2230912_2130331_Lab5Partie2.exe
@@ -135,3 +134,10 @@ C:\Users\Utilisateur\OneDrive\Bureau\Coding\lab5Partie2\2230912_2130331_Lab5Part
 C:\Users\Utilisateur\OneDrive\Bureau\Coding\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\2230912_2130331_Lab5Partie2.pdb
 C:\Users\Utilisateur\OneDrive\Bureau\Coding\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\2230912_2130331_Lab5Partie2.genruntimeconfig.cache
 C:\Users\Utilisateur\OneDrive\Bureau\Coding\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\ref\2230912_2130331_Lab5Partie2.dll
+C:\Users\2130331\Downloads\Lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\2230912_2130331_Lab5Partie2.sourcelink.json
+C:\Users\2130331\Downloads\Lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\staticwebassets\msbuild.2230912_2130331_Lab5Partie2.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\2130331\Downloads\Lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\staticwebassets\msbuild.build.2230912_2130331_Lab5Partie2.props
+C:\Users\2130331\Downloads\Lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.2230912_2130331_Lab5Partie2.props
+C:\Users\2130331\Downloads\Lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.2230912_2130331_Lab5Partie2.props
+C:\Users\2130331\Downloads\Lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\2130331\Downloads\Lab5Partie2\lab5Partie2\2230912_2130331_Lab5Partie2\2230912_2130331_Lab5Partie2\obj\Debug\net6.0\2230912_.2F0ACD4C.Up2Date

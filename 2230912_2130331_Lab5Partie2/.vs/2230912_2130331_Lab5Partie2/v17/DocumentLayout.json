@@ -1,66 +1,62 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\",
+  "WorkspaceRootPath": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\coursfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\coursfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\controllers\\courscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\controllers\\courscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\controllers\\etudiantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\controllers\\etudiantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\etudiantfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\etudiantfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\controllers\\courscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\controllers\\courscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\attributes\\apikeyattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\attributes\\apikeyattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\enseignantfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\enseignantfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\csgpfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\csgpfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\ecsgpfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\ecsgpfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\sessionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\sessionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\models\\cours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\models\\cours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\coursresultatfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\coursresultatfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\base\\factorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\base\\factorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\sql\\lab5config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\sql\\lab5config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\attributes\\apikeyattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\attributes\\apikeyattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\models\\cours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\models\\cours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\sessionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\sessionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\ecsgpfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\ecsgpfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\enseignantfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\enseignantfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -69,6 +65,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\models\\etudiant_coursesessiongroupeprof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\models\\etudiant_coursesessiongroupeprof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\csgpfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\dataaccesslayer\\factories\\csgpfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\sql\\lab5config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|solutionrelative:2230912_2130331_lab5partie2\\sql\\lab5config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{593BC159-B27B-4AFA-95F1-264853154459}|2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2.csproj|c:\\users\\2130331\\downloads\\lab5partie2\\lab5partie2\\2230912_2130331_lab5partie2\\2230912_2130331_lab5partie2\\models\\etudiant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,164 +94,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EtudiantController.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Controllers\\EtudiantController.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Controllers\\EtudiantController.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Controllers\\EtudiantController.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Controllers\\EtudiantController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAkwBgAAABGAAAA",
+              "DocumentIndex": 12,
+              "Title": "ECSGPFactory.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\ECSGPFactory.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\ECSGPFactory.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\ECSGPFactory.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\ECSGPFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T16:42:36.655Z",
+              "WhenOpened": "2024-04-04T12:47:49.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FactoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\Base\\FactoryBase.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\Base\\FactoryBase.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\Base\\FactoryBase.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\Base\\FactoryBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T15:54:30.858Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CoursFactory.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CoursFactory.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CoursFactory.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CoursFactory.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CoursFactory.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAjwE8AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:47:28.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\appsettings.json",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\appsettings.json",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\appsettings.json",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-04T12:46:27.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Cours.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Cours.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\Cours.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Cours.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\Cours.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwB0AAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:46:47.937Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ECSGPFactory.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\ECSGPFactory.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\ECSGPFactory.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\ECSGPFactory.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\ECSGPFactory.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:47:49.438Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CSGPFactory.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CSGPFactory.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CSGPFactory.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CSGPFactory.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CSGPFactory.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAwAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:47:32.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "CoursController.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Controllers\\CoursController.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Controllers\\CoursController.cs",
               "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Controllers\\CoursController.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Controllers\\CoursController.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Controllers\\CoursController.cs",
               "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Controllers\\CoursController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAwCIAAAAJAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowCIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T19:08:42.86Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EtudiantFactory.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\EtudiantFactory.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\EtudiantFactory.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\EtudiantFactory.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\EtudiantFactory.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAuwEYAAABAAAAA",
+              "DocumentIndex": 9,
+              "Title": "DAL.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\DAL.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\DAL.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\DAL.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\DAL.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAowGEAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:48:04.438Z",
+              "WhenOpened": "2024-04-04T12:47:18.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "EnseignantFactory.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\EnseignantFactory.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\EnseignantFactory.cs",
               "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\EnseignantFactory.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\EnseignantFactory.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\EnseignantFactory.cs",
               "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\EnseignantFactory.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAABYAAAA/AAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:48:01.617Z"
+              "WhenOpened": "2024-04-04T12:48:01.617Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SessionFactory.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\SessionFactory.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\SessionFactory.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\SessionFactory.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\SessionFactory.cs",
+              "DocumentIndex": 2,
+              "Title": "ApiKeyAttributes.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Attributes\\ApiKeyAttributes.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Attributes\\ApiKeyAttributes.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Attributes\\ApiKeyAttributes.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Attributes\\ApiKeyAttributes.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:48:10.877Z"
+              "WhenOpened": "2024-04-04T12:48:19.323Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FactoryBase.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\Base\\FactoryBase.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\Base\\FactoryBase.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\Base\\FactoryBase.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\Base\\FactoryBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T15:54:30.858Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DAL.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\DAL.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\DAL.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\DAL.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\DAL.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAAFQAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:47:18.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Program.cs",
               "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Program.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Program.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Program.cs",
               "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -256,23 +189,140 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ApiKeyAttributes.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Attributes\\ApiKeyAttributes.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Attributes\\ApiKeyAttributes.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Attributes\\ApiKeyAttributes.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Attributes\\ApiKeyAttributes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "EtudiantController.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Controllers\\EtudiantController.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Controllers\\EtudiantController.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Controllers\\EtudiantController.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Controllers\\EtudiantController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAA/wDwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:48:19.323Z"
+              "WhenOpened": "2024-04-05T16:42:36.655Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
+              "Title": "CoursResultatFactory.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CoursResultatFactory.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CoursResultatFactory.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CoursResultatFactory.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CoursResultatFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T22:44:00.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\appsettings.Development.json",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-07T23:30:15.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Properties\\launchSettings.json",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-07T23:30:34.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "session.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\session.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\session.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\session.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\session.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T12:47:11.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\appsettings.json",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\appsettings.json",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\appsettings.json",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-04T12:46:27.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SessionFactory.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\SessionFactory.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\SessionFactory.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\SessionFactory.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\SessionFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T12:48:10.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "etudiant_coursesessiongroupeprof.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\etudiant_coursesessiongroupeprof.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\etudiant_coursesessiongroupeprof.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\etudiant_coursesessiongroupeprof.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\etudiant_coursesessiongroupeprof.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T12:47:09.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Cours.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Cours.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\Cours.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Cours.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\Cours.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAYwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T12:46:47.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CSGPFactory.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CSGPFactory.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CSGPFactory.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CSGPFactory.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\DataAccessLayer\\Factories\\CSGPFactory.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAwAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T12:47:32.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Lab5Config.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\SQL\\Lab5Config.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\SQL\\Lab5Config.cs",
               "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\SQL\\Lab5Config.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\SQL\\Lab5Config.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\SQL\\Lab5Config.cs",
               "RelativeToolTip": "2230912_2130331_Lab5Partie2\\SQL\\Lab5Config.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -280,35 +330,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Session.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Session.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\Session.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Session.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\Session.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:47:11.95Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Etudiant_coursesessiongroupeprof.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Etudiant_coursesessiongroupeprof.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\Etudiant_coursesessiongroupeprof.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Etudiant_coursesessiongroupeprof.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\Etudiant_coursesessiongroupeprof.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:47:09.35Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "etudiant.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\etudiant.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\etudiant.cs",
               "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\etudiant.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\etudiant.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\etudiant.cs",
               "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\etudiant.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -316,24 +342,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Enseignant.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Enseignant.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\Enseignant.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Enseignant.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\Enseignant.cs",
+              "DocumentIndex": 19,
+              "Title": "enseignant.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\enseignant.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\enseignant.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\enseignant.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\enseignant.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T12:46:57.451Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Cours_session_groupe_prof.cs",
-              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Cours_session_groupe_prof.cs",
-              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\Cours_session_groupe_prof.cs",
-              "ToolTip": "C:\\Users\\2130331\\Downloads\\lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\Cours_session_groupe_prof.cs",
-              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\Cours_session_groupe_prof.cs",
+              "DocumentIndex": 20,
+              "Title": "cours_session_groupe_prof.cs",
+              "DocumentMoniker": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\cours_session_groupe_prof.cs",
+              "RelativeDocumentMoniker": "2230912_2130331_Lab5Partie2\\Models\\cours_session_groupe_prof.cs",
+              "ToolTip": "C:\\Users\\2130331\\Downloads\\Lab5Partie2\\lab5Partie2\\2230912_2130331_Lab5Partie2\\2230912_2130331_Lab5Partie2\\Models\\cours_session_groupe_prof.cs",
+              "RelativeToolTip": "2230912_2130331_Lab5Partie2\\Models\\cours_session_groupe_prof.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T12:46:52.078Z"

@@ -85,5 +85,18 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer
                 return _sessionFact;
             }
         }
+
+        private CoursResultatFactory _coursResultatFact = null;
+        public CoursResultatFactory CoursResultatFact
+        {
+            get
+            {
+                if( _coursResultatFact == null)
+                {
+                    _coursResultatFact= new CoursResultatFactory(); 
+                }
+                return _coursResultatFact;
+            }
+        }
     }
 }
