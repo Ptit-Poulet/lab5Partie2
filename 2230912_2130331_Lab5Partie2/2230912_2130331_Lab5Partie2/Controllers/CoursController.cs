@@ -13,13 +13,6 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
     [Route("[controller]")]
     public class CoursController : ControllerBase
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-
-
-
 
         /// <summary>
         /// retourner la liste de cours pour un étudiant donné
@@ -27,7 +20,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// <param name="codePermanent"></param>
         /// <returns></returns>
         [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Cours>> GetListCoursEtudian(string codePermanent)
+        public ActionResult<IEnumerable<Cours>> GetListCoursEtudian(string codePermanent, int idCours)
         {
             DAL dal = new DAL();
 
@@ -36,7 +29,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
                 bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
                 if (estPresent)
                 {
-                    return dal.CoursFact.GetListCoursEtudiant(codePermanent);
+                    return dal.CoursFact.GetListCoursEtudiant(codePermanent, idCours);
                 }
                 return StatusCode(404, "L'étudiant n'existe pas.");
             }
