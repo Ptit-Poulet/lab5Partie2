@@ -5,9 +5,10 @@ using _2230912_2130331_Lab5Partie2.DataAccessLayer;
 using _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
+using _2230912_2130331_Lab5Partie2.Attributes;
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
+    [ApiKey]
     [ApiController]
     [Route("[controller]")]
     public class CoursController : ControllerBase
@@ -30,7 +31,19 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         {
             DAL dal = new DAL();
 
-            return dal.CoursFact.GetListCoursEtudiant(codePermanent);
+            try
+            {
+                bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
+                if (estPresent)
+                {
+                    return dal.CoursFact.GetListCoursEtudiant(codePermanent);
+                }
+                return StatusCode(404, "L'étudiant n'existe pas.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors de l'ajout de l'étudiant à un cours : {ex.Message}");
+            }
         }
 
 
@@ -141,5 +154,16 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         }
 
 
+        /// <summary>
+        /// retourner la liste des cours enseignés par un enseignant donné
+        /// </summary>
+        /// <param name="codePermanent"></param>
+        /// <returns></returns>
+        [HttpGet("[action]")]
+        public ActionResult<IEnumerable<CoursResultat>> GetBulletin(string codePermanent)
+        {
+            DAL dal = new DAL();
+            return dal.CoursResultatFact.GetBulletin(codePermanent);
+        }
     }
 }

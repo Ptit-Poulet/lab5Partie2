@@ -21,7 +21,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// Permettre de retourner la liste de cours pour un étudiant donné
         /// </summary>
         /// <returns></returns>
-        public List<Cours> GetListCoursEtudiant(string codePermanent)
+        public List<Cours> GetListCoursEtudiant(string codePermanent)   //cette requête est à revoir car elle doit aussi dépendre du numéro d'une session
         {
             List<Cours> listCours = new List<Cours>();
 
