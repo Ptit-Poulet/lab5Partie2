@@ -80,6 +80,8 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                     mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
                     mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
 
+                    mySqlCmd.ExecuteNonQuery();
+
                 }
             }
             finally
@@ -109,6 +111,8 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
                     mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
                     mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
+
+                    mySqlCmd.ExecuteNonQuery();
 
                 }
             }

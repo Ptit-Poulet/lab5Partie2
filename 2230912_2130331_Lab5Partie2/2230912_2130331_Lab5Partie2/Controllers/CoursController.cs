@@ -20,7 +20,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// <param name="codePermanent"></param>
         /// <returns></returns>
         [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Cours>> GetListCoursEtudian(string codePermanent, int idCours)
+        public ActionResult<IEnumerable<Cours>> GetListCoursEtudiant(string codePermanent, int idCours)
         {
             DAL dal = new DAL();
 
@@ -49,8 +49,19 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         public ActionResult<IEnumerable<Cours>> GetHistoriqueCoursEtudiant(string codePermanent)
         {
             DAL dal = new DAL();
-
-            return dal.CoursFact.GetHistoriqueCoursEtudiant(codePermanent);
+            try
+            {
+                bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
+                if (estPresent)
+                {
+                    return dal.CoursFact.GetHistoriqueCoursEtudiant(codePermanent);
+                }
+                return StatusCode(404, "L'étudiant n'existe pas.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors de l'ajout de l'étudiant à un cours : {ex.Message}");
+            }
         }
         /// <summary>
         /// Ajoute un nouveau cours avec son sigle, son titre et sa durée
@@ -60,13 +71,18 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// <param name="duree"></param>
         /// <returns></returns>
         [HttpPost("[action]")]
-        public ActionResult<IEnumerable<Cours>> AjouterUnCours(string sigle, string titre, int duree)
+        public ActionResult<IEnumerable<Cours>> AjouterUnCours(string sigle, string titre, int duree, int idProf)
         {
             DAL dal = new DAL();
 
             try
             {
-                dal.CoursFact.AddCours(sigle, titre, duree);
+                bool EstPresent = dal.EnseignantFact.GetEnseignant(idProf);
+                if (!EstPresent)
+                    return StatusCode(404, "id du prof n'existe pas.");
+
+                dal.CoursFact.AddCours(sigle, titre, duree, idProf);
+
                 return Ok("Le cours a été ajouté avec succès.");
             }
             catch (Exception ex)
@@ -105,7 +121,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         }
 
         [HttpDelete("[action]")]
-        public ActionResult<IEnumerable<Cours>> EneleverEtudiantDansUnCours(string codePermanent, int idCours)
+        public ActionResult EnleverEtudiantDansUnCours(string codePermanent, int idCours)
         {
             DAL dal = new DAL();
 
@@ -143,7 +159,23 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         public ActionResult<IEnumerable<Cours>> GetListCoursSelonEnseignant(int idProf)
         {
             DAL dal = new DAL();
-            return dal.CoursFact.GetListCoursSelonEnseignant(idProf);
+
+            try
+            {
+                bool existe = dal.EnseignantFact.GetEnseignant(idProf);
+
+                if (existe)
+                {
+                    return  dal.CoursFact.GetListCoursSelonEnseignant(idProf);
+
+                }
+                return StatusCode(404, "L'enseignant n'existe pas.");
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors du chargement des cours depuis la BD : {ex.Message}");
+            }
         }
 
 
@@ -156,7 +188,20 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         public ActionResult<IEnumerable<CoursResultat>> GetBulletin(string codePermanent)
         {
             DAL dal = new DAL();
-            return dal.CoursResultatFact.GetBulletin(codePermanent);
+            try
+            {
+                bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
+                if (estPresent)
+                {
+                    return dal.CoursResultatFact.GetBulletin(codePermanent);
+                }
+                return StatusCode(404, "L'étudiant n'existe pas.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors du chargement des bulletins depuis la BD : {ex.Message}");
+            }
+
         }
     }
 }

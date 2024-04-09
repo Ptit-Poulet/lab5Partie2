@@ -10,23 +10,34 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
-    [ApiKey]
+    //[ApiKey]
     [ApiController]
     [Route("[controller]")]
     public class EtudiantController : ControllerBase
     {
-        
+
         /// <summary>
         /// retourner la liste des étudiants inscrits à un cours donné
         /// </summary>
         /// <param name="titre"></param>
         /// <returns></returns>
         [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Etudiant>> GetListEtudiantCours(string titre)
+        public ActionResult<IEnumerable<Etudiant>> GetListEtudiantCours(int idCours)
         {
             DAL dal = new DAL();
-
-            return dal.EtudiantFact.GetListEtudiantCours(titre);
+            try
+            {
+                bool estPresent = dal.CSGPFact.GetCours(idCours);
+                if (estPresent)
+                {
+                    return dal.EtudiantFact.GetListEtudiantCours(idCours);
+                }
+                return StatusCode(404, "Le cours n'existe pas.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors de la visualisation d'un cours : {ex.Message}");
+            }
         }
         /// <summary>
         /// Ajouter un étudiant à cours 
@@ -101,8 +112,28 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         public ActionResult<IEnumerable<Etudiant>> GetEtudiantSelonDateDiplome(string DateDiplome)
         {
             DAL dal = new DAL();
+            try
+            {
+                bool convert = DateTime.TryParse(DateDiplome, out DateTime date);
 
-            return dal.EtudiantFact.GetEtudiantSelonDateDiplome(DateDiplome);
+                if (!convert)
+                {
+                    return StatusCode(401, "Le format de la date n'est pas bon.");
+                }
+
+                List<Etudiant> etudiants = dal.EtudiantFact.GetEtudiantSelonDateDiplome(date);
+
+                if (etudiants != null)
+                {
+                    return etudiants;
+                }
+                return StatusCode(404, "Il n'y a pas de finissants pour cette année.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors de la visualisation des diplomés : {ex.Message}");
+            }
+
         }
     }
 }

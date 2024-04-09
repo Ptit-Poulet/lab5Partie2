@@ -125,13 +125,15 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
                     mySqlCmd.CommandText = "UPDATE h24_web_transac_2230912.tp5_cours_session_groupe_prof" +
-                        "SET csgp_groupe = 1 WHERE csgp_id = @Id;" +
-                        "INSERT INTO h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof (ecsgp_csgp_id,ecsgp_etu_code_permanent)" +
+                        "SET csgp_groupe = 1 " +
+                        "WHERE csgp_id = @Id; " +
+                        "INSERT INTO h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof(ecsgp_csgp_id,ecsgp_etu_codepermanent) " +
                         "VALUES (@Id,@codePermanent)";
 
                     mySqlCmd.Parameters.AddWithValue("@Id", id);
                     mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
 
+                    mySqlCmd.ExecuteNonQuery();
                 }
             }
             finally
@@ -164,6 +166,8 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
                     mySqlCmd.Parameters.AddWithValue("@idProf", idEnseignant);
                     mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
+
+                    mySqlCmd.ExecuteNonQuery();
 
                 }
             }
