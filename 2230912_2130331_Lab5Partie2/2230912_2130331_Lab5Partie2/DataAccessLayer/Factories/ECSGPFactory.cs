@@ -73,12 +73,14 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
                     mySqlCmd.CommandText = "UPDATE h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof " +
-                        "SET ecsgp_resultat = @Resultat" +
+                        "SET ecsgp_resultat = @Resultat " +
                         "WHERE ecsgp_etu_codepermanent = @codePermanent AND ecsgp_csgp_id = @idCours";
 
                     mySqlCmd.Parameters.AddWithValue("@Resultat", resultat);
                     mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
                     mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
+
+                    mySqlCmd.ExecuteNonQuery();
 
                 }
             }
@@ -102,13 +104,14 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
                     mySqlCmd.CommandText = "DELETE FROM h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof " +
-                        "WHERE ecsgp_etu_codepermanent = @codePermanent AND ecsgp_csgp_id = @idCours;" +
-                        "UPDATE h24_web_transac_2230912.tp5_cours_session_groupe_prof" +
-                        "SET csgp_groupe = 0" +
-                        "WHERE csgp_id = @idCours; ";
+                                            "WHERE ecsgp_etu_codepermanent = @codePermanent " +
+                                            "AND ecsgp_csgp_id = @idCours";
 
                     mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
                     mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
+
+
+                    mySqlCmd.ExecuteNonQuery();
 
                 }
             }

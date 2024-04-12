@@ -21,7 +21,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// Permettre de retourner la liste de cours pour un étudiant donné
         /// </summary>
         /// <returns></returns>
-        public List<Cours> GetListCoursEtudiant(string codePermanent, int idCours)   //cette requête est à revoir car elle doit aussi dépendre du numéro d'une session
+        public List<Cours> GetListCoursEtudiant(string codePermanent)   
         {
             List<Cours> listCours = new List<Cours>();
 
@@ -37,11 +37,10 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                         " FROM h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof as ecsgp " +
                         "join h24_web_transac_2230912.tp5_cours_session_groupe_prof as csgp on ecsgp.ecsgp_id = csgp.csgp_id " +
                         "join h24_web_transac_2230912.tp5_cours as c on c.cou_sigle = csgp.csgp_sigle_cours " +
-                        "where ecsgp_etu_codepermanent = @codePermanent AND ecsgrp_csgp_id = @idCours";
+                        "where ecsgp_etu_codepermanent = @codePermanent AND (SELECT max(se_id) FROM h24_web_transac_2230912.tp5_session)";
 
 
                     mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
-                    mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
 
                     using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
                     {
@@ -169,7 +168,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// <param name="sigle"></param>
         /// <param name="titre"></param>
         /// <param name="duree"></param>
-        public void AddCours(string sigle, string titre, int duree)
+        public void AddCours(string sigle, string titre, int duree, int idProf, int session)
         {
             MySqlConnection mySqlCnn = null;
             try
@@ -182,12 +181,15 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                     mySqlCmd.CommandText = "INSERT INTO h24_web_transac_2230912.tp5_cours(cou_sigle,cou_titre, cou_duree) " +
                         "VALUEs(@Sigle, @Titre, @Duree); " +
                         "INSERT INTO  h24_web_transac_2230912.tp5_cours_session_groupe_prof(csgp_sigle_cours, csgp_id_session, csgp_groupe, csgp_id_prof) " +
-                        "VALUES(@Sigle, 0, 0, 0)";
-
+                        "VALUES(@Sigle, @session, 0, @idProf)";
 
                     mySqlCmd.Parameters.AddWithValue("@Sigle", sigle);
                     mySqlCmd.Parameters.AddWithValue("@Titre", titre);
                     mySqlCmd.Parameters.AddWithValue("@Duree", duree);
+                    mySqlCmd.Parameters.AddWithValue("@session", session);
+                    mySqlCmd.Parameters.AddWithValue("@idProf", idProf);
+
+                    mySqlCmd.ExecuteNonQuery();
                 }
             }
             finally

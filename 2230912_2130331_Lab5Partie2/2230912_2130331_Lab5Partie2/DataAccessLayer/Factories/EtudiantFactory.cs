@@ -27,7 +27,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// </summary>
         /// <param name="DateDiplome"></param>
         /// <returns></returns>
-        public List<Etudiant> GetEtudiantSelonDateDiplome(string DateDiplome)
+        public List<Etudiant> GetEtudiantSelonDateDiplome(DateTime DateDiplome)
         {
             List<Etudiant> etudiant = new List<Etudiant>();
             MySqlConnection mySqlCnn = null;
@@ -68,7 +68,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// Permettre de retourner la liste des étudiants inscrits à un cours donné
         /// </summary>
         /// <returns></returns>
-        public List<Etudiant> GetListEtudiantCours(string sigleCours)
+        public List<Etudiant> GetListEtudiantCours(int idCours)
         {
 
             List<Etudiant> listEtudiants = new List<Etudiant>();
@@ -84,8 +84,8 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                         "FROM h24_web_transac_2230912.tp5_etudiant as e join h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof as ecsgp " +
                         "on e.etu_code_permanent = ecsgp.ecsgp_etu_codepermanent join h24_web_transac_2230912.tp5_cours_session_groupe_prof as csgp " +
                         "on csgp.csgp_id = ecsgp.ecsgp_csgp_id join h24_web_transac_2230912.tp5_cours as c on c.cou_sigle = csgp.csgp_sigle_cours " +
-                        "where cou_sigle = @sigleCours";
-                    mySqlCmd.Parameters.AddWithValue("@sigleCours", sigleCours);
+                        "where csgp.csgp_id = @idCours";
+                    mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
 
                     using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
                     {
