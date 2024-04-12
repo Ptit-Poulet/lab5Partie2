@@ -108,12 +108,60 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
             return EstPresent;
         }
 
+
+        /// <summary>
+        /// Permet de vérifier si un cours(existe) a été donné à une session particulière
+        /// </summary>
+        /// <param name="sigle"></param>
+        /// <param name="idSession"></param>
+        /// <returns></returns>
+        public bool GetCours(string sigleCours, int idSession)
+        {
+            bool EstPresent = false;
+            MySqlConnection mySqlCnn = null;
+            try
+            {
+                mySqlCnn = new MySqlConnection(CnnStr);
+                mySqlCnn.Open();
+
+                using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
+                {
+                    mySqlCmd.CommandText = "SELECT * FROM h24_web_transac_2230912.tp5_cours_session_groupe_prof " +
+                        "WHERE csgp_sigle_cours = @sigle and csgp_id_session = @idSession";
+
+                    mySqlCmd.Parameters.AddWithValue("@sigle", sigleCours);
+                    mySqlCmd.Parameters.AddWithValue("@idSession", idSession);
+
+                    using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
+                    {
+                        if (mySqlDataReader.Read())
+                        {
+                            EstPresent = true;
+                        }
+
+
+                        mySqlDataReader.Close();
+                    }
+
+                }
+            }
+            finally
+            {
+                if (mySqlCnn != null)
+                {
+                    mySqlCnn.Close();
+                }
+            }
+
+            return EstPresent;
+        }
+
         /// <summary>
         /// Permet d'inscrire un étudiant dans un cours donné
         /// </summary>
         /// <param name="id"></param>
         /// <param name="codePermanent"></param>
-        public void AjoutEtudiantDansCours(int id, string codePermanent)
+        public void AjoutEtudiantDansCours(string codePermanent, string sigleCours, int idProf, int noGroupe, string codePermanent)
         {
             
             MySqlConnection mySqlCnn = null;
@@ -150,7 +198,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// </summary>
         /// <param name="idEnseignant"></param>
         /// <param name="idCours"></param>
-        public void ModifEnseignantCours(int idEnseignant, int idCours)
+        public void ModifEnseignantCours(string sigleCours, int idSession,  int idProfActuel, int idProfNew)
         {
             MySqlConnection mySqlCnn = null;
             try
@@ -160,12 +208,13 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
-                    mySqlCmd.CommandText = "UPDATE h24_web_transac_2230912.tp5_cours_session_groupe_prof " +
-                        "SET csgp_id_prof = @idProf" +
-                        "WHERE csgp_id = @idCours";
+                    mySqlCmd.CommandText = "update h24_web_transac_2230912.tp5_cours_session_groupe_prof set csgp_id_prof = @idProfNew " +
+                        "WHERE csgp_sigle_cours= @sigleCours and csgp_id_session= @idSession AND csgp_id_prof = @idProfActuel";
 
-                    mySqlCmd.Parameters.AddWithValue("@idProf", idEnseignant);
-                    mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
+                    mySqlCmd.Parameters.AddWithValue("@idProfNew", idProfNew);
+                    mySqlCmd.Parameters.AddWithValue("@sigleCours", sigleCours);
+                    mySqlCmd.Parameters.AddWithValue("@idSession", idSession);
+                    mySqlCmd.Parameters.AddWithValue("@idProfActuel", idProfActuel);
 
                     mySqlCmd.ExecuteNonQuery();
 

@@ -65,5 +65,46 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
             return EstPresent;
         }
 
+        public int GetIdEnseignantCours(string sigleCours, int idSession)
+        {
+            int idEnseignant = 1000;
+            MySqlConnection mySqlCnn = null;
+            try
+            {
+                mySqlCnn = new MySqlConnection(CnnStr);
+                mySqlCnn.Open();
+
+                using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
+                {
+                    mySqlCmd.CommandText = "SELECT csgp_id_prof FROM h24_web_transac_2230912.tp5_cours_session_groupe_prof " +
+                        "where csgp_sigle_cours= @sigleCours and csgp_id_session = @idSession;";
+
+                         mySqlCmd.Parameters.AddWithValue("@sigleCours", sigleCours);
+                         mySqlCmd.Parameters.AddWithValue("@idSession", idSession);
+
+                    using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
+                    {
+                        if (mySqlDataReader.Read())
+                        {
+                            idEnseignant = Convert.ToInt32(mySqlDataReader["csgp_id_prof"]);
+                        }
+
+
+                        mySqlDataReader.Close();
+                    }
+
+                }
+            }
+            finally
+            {
+                if (mySqlCnn != null)
+                {
+                    mySqlCnn.Close();
+                }
+            }
+
+            return idEnseignant;
+        }
+
     }
 }

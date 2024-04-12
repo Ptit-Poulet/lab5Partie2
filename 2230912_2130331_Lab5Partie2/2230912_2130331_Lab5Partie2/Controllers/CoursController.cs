@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using _2230912_2130331_Lab5Partie2.Attributes;
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
-    [ApiKey]
+  //  [ApiKey]
     [ApiController]
     [Route("[controller]")]
     public class CoursController : ControllerBase
@@ -97,18 +97,24 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// <param name="idCours"></param>
         /// <returns></returns>
         [HttpPut("[action]")]
-        public ActionResult<IEnumerable<Cours>> ModifiEnseignantCours(int idEnseignant, int idCours)
+        public ActionResult ModifiEnseignantCours(string sigleCours, int idSession, int idProfActuel, int idProfNew)
         {
             DAL dal = new DAL();
 
             try
             {
-                bool existe = dal.CSGPFact.GetCours(idCours);
+                bool existe = dal.CSGPFact.GetCours(sigleCours, idSession);
+                bool existingEnseignant = idProfActuel == dal.EnseignantFact.GetIdEnseignantCours(sigleCours, idSession);
 
                 if (existe)
                 {
-                    dal.CSGPFact.ModifEnseignantCours(idEnseignant, idCours);
-                    return Ok("L'enseignant a été modifié avec succès.");
+                    if(existingEnseignant)
+                    {
+                        dal.CSGPFact.ModifEnseignantCours(sigleCours, idSession, idProfActuel, idProfNew);
+                        return Ok("L'enseignant a été modifié avec succès.");
+                    }
+
+                    return StatusCode(404, "Cet enseignant n\'existe pas ou n'est pas associé à ce cours !");
 
                 }
                 return StatusCode(404, "Le cours n'existe pas.");
@@ -116,7 +122,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Une erreur s'est produite lors de la modification d'un enseignant du cours : {ex.Message}");
+                return StatusCode(500, $"Une erreur s'est produite lors de la modification de  l'enseignant du cours : {ex.Message}");
             }
         }
 

@@ -73,7 +73,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
                     mySqlCmd.CommandText = "UPDATE h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof " +
-                        "SET ecsgp_resultat = @Resultat" +
+                        "SET ecsgp_resultat = @Resultat " +
                         "WHERE ecsgp_etu_codepermanent = @codePermanent AND ecsgp_csgp_id = @idCours";
 
                     mySqlCmd.Parameters.AddWithValue("@Resultat", resultat);
