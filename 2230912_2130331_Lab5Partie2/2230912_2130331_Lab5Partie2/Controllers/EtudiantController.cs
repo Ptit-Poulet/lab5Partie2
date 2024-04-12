@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
-    //[ApiKey]
+    [ApiKey]
     [ApiController]
     [Route("[controller]")]
     public class EtudiantController : ControllerBase
@@ -39,6 +39,8 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
                 return StatusCode(500, $"Une erreur s'est produite lors de la visualisation d'un cours : {ex.Message}");
             }
         }
+
+
         /// <summary>
         /// Ajouter un étudiant à cours 
         /// </summary>
@@ -46,7 +48,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// <param name="codePermanent"></param>
         /// <returns></returns>
         [HttpPost("[action]")]
-        public ActionResult<IEnumerable<Etudiant>> AjouterEtudiantDansCours(int idCours, string codePermanent)
+        public ActionResult<IEnumerable<Etudiant>> AjouterEtudiantDansCours(string codePermanent, string sigleCours, int idProf, int noGroupe, string codePermanent)
         {
             DAL dal = new DAL();
 
@@ -74,7 +76,11 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         }
 
         [HttpPut("[action]")]
+<<<<<<< HEAD
         public ActionResult<IEnumerable<Etudiant>> ModifResultatEtudiantDansUnCours(int resultat, string codePermanent, string sigleCours, int idSession)
+=======
+        public ActionResult ModifResultatEtudiantDansUnCours(int resultat, string codePermanent, int idCours)
+>>>>>>> 721291fc244ee201500091cae85549118352f1ab
         {
             DAL dal = new DAL();
 
