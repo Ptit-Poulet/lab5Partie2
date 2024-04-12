@@ -8,7 +8,7 @@ using _2230912_2130331_Lab5Partie2.Attributes;
 
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
-    [ApiKey]
+   // [ApiKey]
     [ApiController]
     [Route("[controller]")]
     public class EtudiantController : ControllerBase
@@ -81,6 +81,38 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// <param name="sigleCours"></param>
         /// <param name="idSession"></param>
         /// <returns></returns>
+<<<<<<< HEAD
+=======
+        [HttpPost("[action]")]
+        public ActionResult<IEnumerable<Etudiant>> AjouterEtudiantDansCours(string sigleCours, int idProf, int noGroupe, string codePermanent)
+        {
+            DAL dal = new DAL();
+
+            try
+            {
+                bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
+                int idCours = 1000;
+                Cours_session_groupe_prof existingLastCSGP = dal.CSGPFact.GetLastCSGP(sigleCours, idProf, noGroupe);
+                if (estPresent)
+                {
+                    if (existingLastCSGP != null)
+                    {
+                        dal.CSGPFact.AjoutEtudiantDansCours(existingLastCSGP, codePermanent);
+                        return Ok("L'étudiant a été ajouté avec succès.");
+
+                    }
+                    return StatusCode(404, "Ce cours n'existe pas pour ces paramètres à la session actuelle !");
+
+                }
+                return StatusCode(404, "L'étudiant n'existe pas.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors de l'ajout de l'étudiant à un cours : {ex.Message}");
+            }
+        }
+
+>>>>>>> 6b1142a86e62413f0feb47c6694781c19b78c590
         [HttpPut("[action]")]
         public ActionResult<IEnumerable<Etudiant>> ModifResultatEtudiantDansUnCours(int resultat, string codePermanent, string sigleCours, int idSession)
         {

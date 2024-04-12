@@ -16,6 +16,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
         }
 
+<<<<<<< HEAD
         public int GetSessionActuel()
         {
             int session = 1000;
@@ -53,5 +54,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
             return session;
         }
         
+=======
+>>>>>>> 6b1142a86e62413f0feb47c6694781c19b78c590
     }
 }

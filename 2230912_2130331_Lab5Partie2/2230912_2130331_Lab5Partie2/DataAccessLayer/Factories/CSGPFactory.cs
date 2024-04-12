@@ -1,5 +1,6 @@
 ﻿using _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories.Base;
 using _2230912_2130331_Lab5Partie2.Models;
+using Microsoft.AspNetCore.Http;
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 
@@ -158,7 +159,59 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         }
 
 
+<<<<<<< HEAD
         public bool GetCoursSelonSigle(string sigleCours)
+=======
+        public Cours_session_groupe_prof GetLastCSGP(string sigleCours, int idProf, int noGroupe)
+        {
+            Cours_session_groupe_prof CSGP = null;
+            MySqlConnection mySqlCnn = null;
+            try
+            {
+                mySqlCnn = new MySqlConnection(CnnStr);
+                mySqlCnn.Open();
+
+                using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
+                {
+                    mySqlCmd.CommandText = "SELECT * FROM h24_web_transac_2230912.tp5_cours_session_groupe_prof " +
+                        "where csgp_sigle_cours = @sigleCours and csgp_id_prof = @idProf and csgp_groupe = @noGroupe  and csgp_id_session = 5;";
+
+                    //Il va falloir ne pas utiliser le 5 comme numero de session actuelle et utiliser fonction le get de samara
+
+                    mySqlCmd.Parameters.AddWithValue("@sigleCours", sigleCours);
+                    mySqlCmd.Parameters.AddWithValue("@idProf", @idProf);
+                    mySqlCmd.Parameters.AddWithValue("@noGroupe", noGroupe);
+
+                    using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
+                    {
+                        if (mySqlDataReader.Read())
+                        {
+                            CSGP = CreateFromReader(mySqlDataReader);   
+                        }
+
+                        mySqlDataReader.Close();
+                    }
+
+                }
+            }
+            finally
+            {
+                if (mySqlCnn != null)
+                {
+                    mySqlCnn.Close();
+                }
+            }
+
+            return CSGP;
+        }
+
+        /// <summary>
+        /// Permet d'inscrire un étudiant dans un cours donné
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="codePermanent"></param>
+        public void AjoutEtudiantDansCours(Cours_session_groupe_prof csgp, string codePermanent)
+>>>>>>> 6b1142a86e62413f0feb47c6694781c19b78c590
         {
             bool EstPresent = false;
             MySqlConnection mySqlCnn = null;
@@ -169,6 +222,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
+<<<<<<< HEAD
                     mySqlCmd.CommandText = "SELECT * FROM h24_web_transac_2230912.tp5_cours_session_groupe_prof WHERE csgp_sigle_cours = @Sigle";
 
                     mySqlCmd.Parameters.AddWithValue("@Sigle", sigleCours);
@@ -182,6 +236,17 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
                         mySqlDataReader.Close();
                     }
+=======
+                    mySqlCmd.CommandText = "INSERT INTO h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof(ecsgp_csgp_id,ecsgp_etu_codepermanent) " +
+                        "VALUES (@Id,@codePermanent)" +
+                        "update h24_web_transac_2230912.tp5_cours_session_groupe_prof " +
+                        "set csgp_groupe = 1 + csgp_groupe where csgp_sigle_cours = @SigleCours and csgp_id_session = @idSession and csgp_prof = @idProf";
+
+
+                    mySqlCmd.Parameters.AddWithValue("@I@SigleCours", csgp.csgp_sigle_cours);
+                    mySqlCmd.Parameters.AddWithValue("@idSession", csgp.csgp_id_session);
+                    mySqlCmd.Parameters.AddWithValue("@idProf", codePermanent);
+>>>>>>> 6b1142a86e62413f0feb47c6694781c19b78c590
 
                 }
             }
