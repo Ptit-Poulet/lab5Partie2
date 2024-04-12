@@ -74,17 +74,18 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         }
 
         [HttpPut("[action]")]
-        public ActionResult<IEnumerable<Etudiant>> ModifResultatEtudiantDansUnCours(int resultat, string codePermanent, int idCours)
+        public ActionResult<IEnumerable<Etudiant>> ModifResultatEtudiantDansUnCours(int resultat, string codePermanent, string sigleCours, int idSession)
         {
             DAL dal = new DAL();
 
             try
             {
                 bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
-                bool existe = dal.CSGPFact.GetCours(idCours);
+                int idCours = dal.CSGPFact.GetidCoursSelonSigleEtSession(sigleCours, idSession);
+                
                 if (estPresent)
                 {
-                    if (existe)
+                    if (idCours != 1000)
                     {
                         dal.ECSGPFact.ModifResultatEutdiant(resultat, codePermanent, idCours);
                         return Ok("Le résultat de l'étudiant a été modifié avec succès.");
