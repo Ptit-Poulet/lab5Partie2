@@ -16,7 +16,6 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
         }
 
-<<<<<<< HEAD
         public int GetSessionActuel()
         {
             int session = 1000;
@@ -28,13 +27,13 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
-                    mySqlCmd.CommandText = "SELECT max(se_id) FROM h24_web_transac_2230912.tp5_session";
+                    mySqlCmd.CommandText = "SELECT Max(se_id) FROM h24_web_transac_2230912.tp5_session";
 
                     using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
                     {
                         if (mySqlDataReader.Read())
                         {
-                            session = Convert.ToInt32(mySqlDataReader["se_id"]);
+                            session = (int)mySqlDataReader["Max(se_id)"];
                         }
 
 
@@ -54,7 +53,5 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
             return session;
         }
         
-=======
->>>>>>> 6b1142a86e62413f0feb47c6694781c19b78c590
     }
 }

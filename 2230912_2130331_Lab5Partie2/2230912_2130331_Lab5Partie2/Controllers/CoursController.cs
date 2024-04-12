@@ -14,7 +14,6 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
     [Route("[controller]")]
     public class CoursController : ControllerBase
     {
-
         /// <summary>
         /// Retourner la liste des cours actuel pour un étudiant donné
         /// </summary>
@@ -54,7 +53,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// <param name="codePermanent"></param>
         /// <returns></returns>
         [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Cours>> GetHistoriqueCoursEtudiant(string codePermanent) //TOUS LES COURS OU SELON UNE SESSION ?
+        public ActionResult<IEnumerable<Cours>> GetHistoriqueCoursEtudiant(string codePermanent)
         {
             DAL dal = new DAL();
             try
@@ -92,6 +91,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
                     return StatusCode(404, "id du prof n'existe pas.");
 
                 int session = dal.SessionFact.GetSessionActuel();
+
                 dal.CoursFact.AddCours(sigle, titre, duree, idProf, session);
 
                 return Ok("Le cours a été ajouté avec succès.");

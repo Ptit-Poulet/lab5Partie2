@@ -8,7 +8,7 @@ using _2230912_2130331_Lab5Partie2.Attributes;
 
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
-   // [ApiKey]
+    //[ApiKey]
     [ApiController]
     [Route("[controller]")]
     public class EtudiantController : ControllerBase
@@ -37,52 +37,12 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
                 return StatusCode(500, $"Une erreur s'est produite lors de la visualisation d'un cours : {ex.Message}");
             }
         }
-
-
-        ///// <summary>
-        ///// Ajouter un étudiant à cours 
-        ///// </summary>
-        ///// <param name="idCours"></param>
-        ///// <param name="codePermanent"></param>
-        ///// <returns></returns>
-        //[HttpPost("[action]")]
-        //public ActionResult<IEnumerable<Etudiant>> AjouterEtudiantDansCours(string codePermanent, string sigleCours, int idProf, int noGroupe)
-        //{
-        //    DAL dal = new DAL();
-
-        //    try
-        //    {
-        //        bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
-        //        bool existe = dal.CSGPFact.GetCours(idCours);
-        //        if (estPresent)
-        //        {
-        //            if (existe)
-        //            {
-        //                dal.CSGPFact.AjoutEtudiantDansCours(idCours, codePermanent);
-        //                return Ok("L'étudiant a été ajouté avec succès.");
-
-        //            }
-        //            return StatusCode(404, "Le cours n'existe pas.");
-
-        //        }
-        //        return StatusCode(404, "L'étudiant n'existe pas.");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, $"Une erreur s'est produite lors de l'ajout de l'étudiant à un cours : {ex.Message}");
-        //    }
-        //}
-
         /// <summary>
-        /// Modifier le résultat d'un étudiant selon un cours donné
+        /// Ajouter un étudiant à cours 
         /// </summary>
-        /// <param name="resultat"></param>
+        /// <param name="idCours"></param>
         /// <param name="codePermanent"></param>
-        /// <param name="sigleCours"></param>
-        /// <param name="idSession"></param>
         /// <returns></returns>
-<<<<<<< HEAD
-=======
         [HttpPost("[action]")]
         public ActionResult<IEnumerable<Etudiant>> AjouterEtudiantDansCours(string sigleCours, int idProf, int noGroupe, string codePermanent)
         {
@@ -92,7 +52,8 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             {
                 bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
                 int idCours = 1000;
-                Cours_session_groupe_prof existingLastCSGP = dal.CSGPFact.GetLastCSGP(sigleCours, idProf, noGroupe);
+                int idSession = dal.SessionFact.GetSessionActuel();
+                Cours_session_groupe_prof existingLastCSGP = dal.CSGPFact.GetLastCSGP(sigleCours, idProf, noGroupe, idSession);
                 if (estPresent)
                 {
                     if (existingLastCSGP != null)
@@ -112,7 +73,15 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             }
         }
 
->>>>>>> 6b1142a86e62413f0feb47c6694781c19b78c590
+
+        /// <summary>
+        /// Modifier le résultat d'un étudiant selon un cours donné
+        /// </summary>
+        /// <param name="resultat"></param>
+        /// <param name="codePermanent"></param>
+        /// <param name="sigleCours"></param>
+        /// <param name="idSession"></param>
+        /// <returns></returns>
         [HttpPut("[action]")]
         public ActionResult<IEnumerable<Etudiant>> ModifResultatEtudiantDansUnCours(int resultat, string codePermanent, string sigleCours, int idSession)
         {
@@ -141,7 +110,6 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
                 return StatusCode(500, $"Une erreur s'est produite lors de la modification d'un de l'étudiant à un cours : {ex.Message}");
             }
         }
-
 
         /// <summary>
         /// Retourner la liste des finissants pour une année donnée
