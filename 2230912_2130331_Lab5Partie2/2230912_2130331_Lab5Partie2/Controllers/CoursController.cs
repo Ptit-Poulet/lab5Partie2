@@ -20,16 +20,24 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// <param name="codePermanent"></param>
         /// <returns></returns>
         [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Cours>> GetListCoursEtudiant(string codePermanent, int idCours)
+        public ActionResult<IEnumerable<Cours>> GetListCoursActuelEtudiant(string codePermanent)
         {
+            List<Cours> cours;
             DAL dal = new DAL();
 
             try
             {
                 bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
+
                 if (estPresent)
                 {
-                    return dal.CoursFact.GetListCoursEtudiant(codePermanent, idCours);
+                    cours = dal.CoursFact.GetListCoursEtudiant(codePermanent);
+
+                    if(cours.Count > 0)
+                    {
+                        return cours;
+                    }
+                    return StatusCode(200, "L'étudiant n'a aucun cours dans la session actuel.");
                 }
                 return StatusCode(404, "L'étudiant n'existe pas.");
             }

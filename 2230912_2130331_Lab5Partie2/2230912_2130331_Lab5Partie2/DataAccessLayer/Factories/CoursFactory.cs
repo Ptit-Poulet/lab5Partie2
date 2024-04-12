@@ -21,7 +21,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// Permettre de retourner la liste de cours pour un étudiant donné
         /// </summary>
         /// <returns></returns>
-        public List<Cours> GetListCoursEtudiant(string codePermanent, int idCours)   //cette requête est à revoir car elle doit aussi dépendre du numéro d'une session
+        public List<Cours> GetListCoursEtudiant(string codePermanent)   
         {
             List<Cours> listCours = new List<Cours>();
 
@@ -37,11 +37,10 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                         " FROM h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof as ecsgp " +
                         "join h24_web_transac_2230912.tp5_cours_session_groupe_prof as csgp on ecsgp.ecsgp_id = csgp.csgp_id " +
                         "join h24_web_transac_2230912.tp5_cours as c on c.cou_sigle = csgp.csgp_sigle_cours " +
-                        "where ecsgp_etu_codepermanent = @codePermanent AND ecsgrp_csgp_id = @idCours";
+                        "where ecsgp_etu_codepermanent = @codePermanent AND (SELECT max(se_id) FROM h24_web_transac_2230912.tp5_session)";
 
 
                     mySqlCmd.Parameters.AddWithValue("@codePermanent", codePermanent);
-                    mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
 
                     using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
                     {
