@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using _2230912_2130331_Lab5Partie2.Attributes;
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
-    [ApiKey]
+    //[ApiKey]
     [ApiController]
     [Route("[controller]")]
     public class CoursController : ControllerBase
@@ -121,20 +121,25 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         }
 
         [HttpDelete("[action]")]
-        public ActionResult EnleverEtudiantDansUnCours(string codePermanent, int idCours)
+        public ActionResult EnleverEtudiantDansUnCours(string codePermanent, string sigleCours, int idSession)
         {
             DAL dal = new DAL();
 
             try
             {
                 bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
-                bool existe = dal.CSGPFact.GetCours(idCours);
+                bool existe = dal.CSGPFact.GetCoursSelonSigle(sigleCours);
+                int idCours = dal.CSGPFact.GetidCoursSelonSigleEtSession(sigleCours, idSession);
                 if (estPresent)
                 {
                     if (existe)
                     {
-                        dal.ECSGPFact.SupprEtudiantCours(codePermanent, idCours);
-                        return Ok("L'étudiant a été enlevé avec succès.");
+                        if (idCours != 1000)
+                        {
+                            dal.ECSGPFact.SupprEtudiantCours(codePermanent, idCours);
+                            return Ok("L'étudiant a été enlevé avec succès.");
+                        }
+
 
                     }
                     return StatusCode(404, "Le cours n'existe pas.");
@@ -166,7 +171,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
 
                 if (existe)
                 {
-                    return  dal.CoursFact.GetListCoursSelonEnseignant(idProf);
+                    return dal.CoursFact.GetListCoursSelonEnseignant(idProf);
 
                 }
                 return StatusCode(404, "L'enseignant n'existe pas.");

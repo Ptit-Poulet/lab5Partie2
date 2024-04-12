@@ -108,6 +108,85 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
             return EstPresent;
         }
 
+        public bool GetCoursSelonSigle(string sigleCours)
+        {
+            bool EstPresent = false;
+            MySqlConnection mySqlCnn = null;
+            try
+            {
+                mySqlCnn = new MySqlConnection(CnnStr);
+                mySqlCnn.Open();
+
+                using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
+                {
+                    mySqlCmd.CommandText = "SELECT * FROM h24_web_transac_2230912.tp5_cours_session_groupe_prof WHERE csgp_sigle_cours = @Sigle";
+
+                    mySqlCmd.Parameters.AddWithValue("@Sigle", sigleCours);
+
+                    using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
+                    {
+                        if (mySqlDataReader.Read())
+                        {
+                            EstPresent = true;
+                        }
+
+
+                        mySqlDataReader.Close();
+                    }
+
+                }
+            }
+            finally
+            {
+                if (mySqlCnn != null)
+                {
+                    mySqlCnn.Close();
+                }
+            }
+
+            return EstPresent;
+        }
+
+        public int GetidCoursSelonSigleEtSession(string sigle, int idSession)
+        {
+            int idCours = 1000;
+            MySqlConnection mySqlCnn = null;
+            try
+            {
+                mySqlCnn = new MySqlConnection(CnnStr);
+                mySqlCnn.Open();
+
+                using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
+                {
+                    mySqlCmd.CommandText = "SELECT csgp_id FROM h24_web_transac_2230912.tp5_cours_session_groupe_prof WHERE csgp_sigle_cours = @Sigle AND csgp_id_session = @IdSession";
+
+                    mySqlCmd.Parameters.AddWithValue("@Sigle", sigle);
+                    mySqlCmd.Parameters.AddWithValue("@IdSession", idSession);
+
+                    using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
+                    {
+                        if (mySqlDataReader.Read())
+                        {
+                            idCours = (int)mySqlDataReader["csgp_id"];
+                        }
+
+
+                        mySqlDataReader.Close();
+                    }
+
+                }
+            }
+            finally
+            {
+                if (mySqlCnn != null)
+                {
+                    mySqlCnn.Close();
+                }
+            }
+
+            return idCours;
+        }
+
         /// <summary>
         /// Permet d'inscrire un étudiant dans un cours donné
         /// </summary>
