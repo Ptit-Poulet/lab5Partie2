@@ -8,18 +8,15 @@ using Microsoft.AspNetCore.Mvc;
 using _2230912_2130331_Lab5Partie2.Attributes;
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
-<<<<<<< HEAD
+
     //[ApiKey]
-=======
-  //  [ApiKey]
->>>>>>> 721291fc244ee201500091cae85549118352f1ab
     [ApiController]
     [Route("[controller]")]
     public class CoursController : ControllerBase
     {
 
         /// <summary>
-        /// retourner la liste de cours pour un étudiant donné
+        /// Retourner la liste des cours actuel pour un étudiant donné
         /// </summary>
         /// <param name="codePermanent"></param>
         /// <returns></returns>
@@ -51,14 +48,13 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             }
         }
 
-
         /// <summary>
-        /// retourner l’historique des cours suivis pour un étudiant donné
+        /// Retourner l’historique des cours suivis pour un étudiant donné
         /// </summary>
         /// <param name="codePermanent"></param>
         /// <returns></returns>
         [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Cours>> GetHistoriqueCoursEtudiant(string codePermanent)
+        public ActionResult<IEnumerable<Cours>> GetHistoriqueCoursEtudiant(string codePermanent) //TOUS LES COURS OU SELON UNE SESSION ?
         {
             DAL dal = new DAL();
             try
@@ -75,12 +71,14 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
                 return StatusCode(500, $"Une erreur s'est produite lors de l'ajout de l'étudiant à un cours : {ex.Message}");
             }
         }
+
         /// <summary>
-        /// Ajoute un nouveau cours avec son sigle, son titre et sa durée
+        /// Ajoute un nouveau cours 
         /// </summary>
         /// <param name="sigle"></param>
         /// <param name="titre"></param>
         /// <param name="duree"></param>
+        /// <param name="idProf"></param>
         /// <returns></returns>
         [HttpPost("[action]")]
         public ActionResult<IEnumerable<Cours>> AjouterUnCours(string sigle, string titre, int duree, int idProf)
@@ -93,7 +91,8 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
                 if (!EstPresent)
                     return StatusCode(404, "id du prof n'existe pas.");
 
-                dal.CoursFact.AddCours(sigle, titre, duree, idProf);
+                int session = dal.SessionFact.GetSessionActuel();
+                dal.CoursFact.AddCours(sigle, titre, duree, idProf, session);
 
                 return Ok("Le cours a été ajouté avec succès.");
             }
@@ -102,11 +101,14 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
                 return StatusCode(500, $"Une erreur s'est produite lors de l'ajout du cours : {ex.Message}");
             }
         }
+
         /// <summary>
         /// Modifie l'enseignant qui est affecté à un cours
         /// </summary>
-        /// <param name="idEnseignant"></param>
-        /// <param name="idCours"></param>
+        /// <param name="sigleCours"></param>
+        /// <param name="idSession"></param>
+        /// <param name="idProfActuel"></param>
+        /// <param name="idProfNew"></param>
         /// <returns></returns>
         [HttpPut("[action]")]
         public ActionResult ModifiEnseignantCours(string sigleCours, int idSession, int idProfActuel, int idProfNew)
@@ -138,6 +140,13 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             }
         }
 
+        /// <summary>
+        /// Enleve un étudiant d'un cours spécifique
+        /// </summary>
+        /// <param name="codePermanent"></param>
+        /// <param name="sigleCours"></param>
+        /// <param name="idSession"></param>
+        /// <returns></returns>
         [HttpDelete("[action]")]
         public ActionResult EnleverEtudiantDansUnCours(string codePermanent, string sigleCours, int idSession)
         {
@@ -172,7 +181,6 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             }
         }
 
-
         /// <summary>
         /// retourner la liste des cours enseignés par un enseignant donné
         /// </summary>
@@ -201,30 +209,5 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             }
         }
 
-
-        /// <summary>
-        /// retourner la liste des cours enseignés par un enseignant donné
-        /// </summary>
-        /// <param name="codePermanent"></param>
-        /// <returns></returns>
-        [HttpGet("[action]")]
-        public ActionResult<IEnumerable<CoursResultat>> GetBulletin(string codePermanent)
-        {
-            DAL dal = new DAL();
-            try
-            {
-                bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
-                if (estPresent)
-                {
-                    return dal.CoursResultatFact.GetBulletin(codePermanent);
-                }
-                return StatusCode(404, "L'étudiant n'existe pas.");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Une erreur s'est produite lors du chargement des bulletins depuis la BD : {ex.Message}");
-            }
-
-        }
     }
 }

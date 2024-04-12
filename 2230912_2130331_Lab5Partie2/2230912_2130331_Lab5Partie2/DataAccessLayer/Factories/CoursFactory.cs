@@ -168,7 +168,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// <param name="sigle"></param>
         /// <param name="titre"></param>
         /// <param name="duree"></param>
-        public void AddCours(string sigle, string titre, int duree, int idProf)
+        public void AddCours(string sigle, string titre, int duree, int idProf, int session)
         {
             MySqlConnection mySqlCnn = null;
             try
@@ -181,14 +181,12 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
                     mySqlCmd.CommandText = "INSERT INTO h24_web_transac_2230912.tp5_cours(cou_sigle,cou_titre, cou_duree) " +
                         "VALUEs(@Sigle, @Titre, @Duree); " +
                         "INSERT INTO  h24_web_transac_2230912.tp5_cours_session_groupe_prof(csgp_sigle_cours, csgp_id_session, csgp_groupe, csgp_id_prof) " +
-                        "VALUES(@Sigle, 5, 0, @idProf)";
-
-                    //TODO considerer la session actuelle, à la place de 5
-
+                        "VALUES(@Sigle, @session, 0, @idProf)";
 
                     mySqlCmd.Parameters.AddWithValue("@Sigle", sigle);
                     mySqlCmd.Parameters.AddWithValue("@Titre", titre);
                     mySqlCmd.Parameters.AddWithValue("@Duree", duree);
+                    mySqlCmd.Parameters.AddWithValue("@session", session);
                     mySqlCmd.Parameters.AddWithValue("@idProf", idProf);
 
                     mySqlCmd.ExecuteNonQuery();

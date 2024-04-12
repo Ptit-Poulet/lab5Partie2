@@ -5,8 +5,6 @@ using _2230912_2130331_Lab5Partie2.DataAccessLayer;
 using _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories;
 using Microsoft.AspNetCore.Http;
 using _2230912_2130331_Lab5Partie2.Attributes;
-using Microsoft.AspNetCore.Mvc;
-
 
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
@@ -41,46 +39,50 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         }
 
 
+        ///// <summary>
+        ///// Ajouter un étudiant à cours 
+        ///// </summary>
+        ///// <param name="idCours"></param>
+        ///// <param name="codePermanent"></param>
+        ///// <returns></returns>
+        //[HttpPost("[action]")]
+        //public ActionResult<IEnumerable<Etudiant>> AjouterEtudiantDansCours(string codePermanent, string sigleCours, int idProf, int noGroupe)
+        //{
+        //    DAL dal = new DAL();
+
+        //    try
+        //    {
+        //        bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
+        //        bool existe = dal.CSGPFact.GetCours(idCours);
+        //        if (estPresent)
+        //        {
+        //            if (existe)
+        //            {
+        //                dal.CSGPFact.AjoutEtudiantDansCours(idCours, codePermanent);
+        //                return Ok("L'étudiant a été ajouté avec succès.");
+
+        //            }
+        //            return StatusCode(404, "Le cours n'existe pas.");
+
+        //        }
+        //        return StatusCode(404, "L'étudiant n'existe pas.");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Une erreur s'est produite lors de l'ajout de l'étudiant à un cours : {ex.Message}");
+        //    }
+        //}
+
         /// <summary>
-        /// Ajouter un étudiant à cours 
+        /// Modifier le résultat d'un étudiant selon un cours donné
         /// </summary>
-        /// <param name="idCours"></param>
+        /// <param name="resultat"></param>
         /// <param name="codePermanent"></param>
+        /// <param name="sigleCours"></param>
+        /// <param name="idSession"></param>
         /// <returns></returns>
-        [HttpPost("[action]")]
-        public ActionResult<IEnumerable<Etudiant>> AjouterEtudiantDansCours(string codePermanent, string sigleCours, int idProf, int noGroupe, string codePermanent)
-        {
-            DAL dal = new DAL();
-
-            try
-            {
-                bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
-                bool existe = dal.CSGPFact.GetCours(idCours);
-                if (estPresent)
-                {
-                    if (existe)
-                    {
-                        dal.CSGPFact.AjoutEtudiantDansCours(idCours, codePermanent);
-                        return Ok("L'étudiant a été ajouté avec succès.");
-
-                    }
-                    return StatusCode(404, "Le cours n'existe pas.");
-
-                }
-                return StatusCode(404, "L'étudiant n'existe pas.");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Une erreur s'est produite lors de l'ajout de l'étudiant à un cours : {ex.Message}");
-            }
-        }
-
         [HttpPut("[action]")]
-<<<<<<< HEAD
         public ActionResult<IEnumerable<Etudiant>> ModifResultatEtudiantDansUnCours(int resultat, string codePermanent, string sigleCours, int idSession)
-=======
-        public ActionResult ModifResultatEtudiantDansUnCours(int resultat, string codePermanent, int idCours)
->>>>>>> 721291fc244ee201500091cae85549118352f1ab
         {
             DAL dal = new DAL();
 
@@ -88,7 +90,7 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             {
                 bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
                 int idCours = dal.CSGPFact.GetidCoursSelonSigleEtSession(sigleCours, idSession);
-                
+
                 if (estPresent)
                 {
                     if (idCours != 1000)
@@ -139,6 +141,31 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, $"Une erreur s'est produite lors de la visualisation des diplomés : {ex.Message}");
+            }
+
+        }
+
+        /// <summary>
+        /// Retourner les bulletins des cours suivi pour un étudiant donné
+        /// </summary>
+        /// <param name="codePermanent"></param>
+        /// <returns></returns>
+        [HttpGet("[action]")]
+        public ActionResult<IEnumerable<CoursResultat>> GetBulletin(string codePermanent)
+        {
+            DAL dal = new DAL();
+            try
+            {
+                bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
+                if (estPresent)
+                {
+                    return dal.CoursResultatFact.GetBulletin(codePermanent);
+                }
+                return StatusCode(404, "L'étudiant n'existe pas.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Une erreur s'est produite lors du chargement des bulletins depuis la BD : {ex.Message}");
             }
 
         }
