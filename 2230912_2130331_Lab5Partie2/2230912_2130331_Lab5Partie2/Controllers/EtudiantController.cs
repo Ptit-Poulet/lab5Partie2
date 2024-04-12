@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace _2230912_2130331_Lab5Partie2.Controllers
 {
-    [ApiKey]
+   // [ApiKey]
     [ApiController]
     [Route("[controller]")]
     public class EtudiantController : ControllerBase
@@ -48,23 +48,24 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// <param name="codePermanent"></param>
         /// <returns></returns>
         [HttpPost("[action]")]
-        public ActionResult<IEnumerable<Etudiant>> AjouterEtudiantDansCours(string codePermanent, string sigleCours, int idProf, int noGroupe, string codePermanent)
+        public ActionResult<IEnumerable<Etudiant>> AjouterEtudiantDansCours(string sigleCours, int idProf, int noGroupe, string codePermanent)
         {
             DAL dal = new DAL();
 
             try
             {
                 bool estPresent = dal.EtudiantFact.GetEtudiant(codePermanent);
-                bool existe = dal.CSGPFact.GetCours(idCours);
+                int idCours = 1000;
+                Cours_session_groupe_prof existingLastCSGP = dal.CSGPFact.GetLastCSGP(sigleCours, idProf, noGroupe);
                 if (estPresent)
                 {
-                    if (existe)
+                    if (existingLastCSGP != null)
                     {
-                        dal.CSGPFact.AjoutEtudiantDansCours(idCours, codePermanent);
+                        dal.CSGPFact.AjoutEtudiantDansCours(existingLastCSGP, codePermanent);
                         return Ok("L'étudiant a été ajouté avec succès.");
 
                     }
-                    return StatusCode(404, "Le cours n'existe pas.");
+                    return StatusCode(404, "Ce cours n'existe pas pour ces paramètres à la session actuelle !");
 
                 }
                 return StatusCode(404, "L'étudiant n'existe pas.");
