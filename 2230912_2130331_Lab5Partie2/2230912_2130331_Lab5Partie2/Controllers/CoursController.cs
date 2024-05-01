@@ -87,8 +87,12 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
             try
             {
                 bool EstPresent = dal.EnseignantFact.GetEnseignant(idProf);
+                bool Existe = dal.CoursFact.GetCours(sigle);
                 if (!EstPresent)
                     return StatusCode(404, "id du prof n'existe pas.");
+
+                if(Existe)
+                    return StatusCode(400, "Il existe déja un cours avec le meme sigle!");
 
                 int session = dal.SessionFact.GetSessionActuel();
 
