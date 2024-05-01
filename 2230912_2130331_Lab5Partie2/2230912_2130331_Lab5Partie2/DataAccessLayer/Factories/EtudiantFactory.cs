@@ -68,7 +68,7 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         /// Permettre de retourner la liste des étudiants inscrits à un cours donné
         /// </summary>
         /// <returns></returns>
-        public List<Etudiant> GetListEtudiantCours(int idCours)
+        public List<Etudiant> GetListEtudiantCours(string sigleCours , int idSession)
         {
 
             List<Etudiant> listEtudiants = new List<Etudiant>();
@@ -80,12 +80,14 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
 
                 using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
                 {
-                    mySqlCmd.CommandText = "SELECT etu_code_permanent, etu_nom, etu_prenom, etu_date_naissance, etu_date_inscription, etu_date_diplome, etu_num_da " +
-                        "FROM h24_web_transac_2230912.tp5_etudiant as e join h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof as ecsgp " +
-                        "on e.etu_code_permanent = ecsgp.ecsgp_etu_codepermanent join h24_web_transac_2230912.tp5_cours_session_groupe_prof as csgp " +
-                        "on csgp.csgp_id = ecsgp.ecsgp_csgp_id join h24_web_transac_2230912.tp5_cours as c on c.cou_sigle = csgp.csgp_sigle_cours " +
-                        "where csgp.csgp_id = @idCours";
-                    mySqlCmd.Parameters.AddWithValue("@idCours", idCours);
+                    mySqlCmd.CommandText = "SELECT distinct etu_code_permanent, etu_nom, etu_prenom, etu_date_naissance, etu_date_inscription, etu_date_diplome, etu_num_da " +
+                                           "FROM h24_web_transac_2230912.tp5_etudiant as e join h24_web_transac_2230912.tp5_etudiant_courssessiongroupeprof as ecsgp " + 
+                                           "on e.etu_code_permanent = ecsgp.ecsgp_etu_codepermanent join h24_web_transac_2230912.tp5_cours_session_groupe_prof as csgp " +
+                                           "on csgp.csgp_id = ecsgp.ecsgp_csgp_id join h24_web_transac_2230912.tp5_cours as c on c.cou_sigle = csgp.csgp_sigle_cours " +
+                                           "where c.cou_sigle = @sigleCours and csgp.csgp_id_session = @idSession";
+
+                    mySqlCmd.Parameters.AddWithValue("@sigleCours", sigleCours);
+                    mySqlCmd.Parameters.AddWithValue("@idSession", idSession);
 
                     using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
                     {

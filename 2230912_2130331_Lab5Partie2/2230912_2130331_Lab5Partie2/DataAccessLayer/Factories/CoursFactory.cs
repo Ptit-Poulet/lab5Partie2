@@ -18,6 +18,52 @@ namespace _2230912_2130331_Lab5Partie2.DataAccessLayer.Factories
         }
 
         /// <summary>
+        /// Permettre de vérifier la présence d'un cours
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool GetCours(string sigleCours)
+        {
+            bool EstPresent = false;
+            MySqlConnection mySqlCnn = null;
+            try
+            {
+                mySqlCnn = new MySqlConnection(CnnStr);
+                mySqlCnn.Open();
+
+                using (MySqlCommand mySqlCmd = mySqlCnn.CreateCommand())
+                {
+                    mySqlCmd.CommandText = "SELECT * FROM h24_web_transac_2230912.tp5_cours WHERE cou_sigle = @SigleCours";
+
+                    mySqlCmd.Parameters.AddWithValue("@SigleCours", sigleCours);
+
+                    using (MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader())
+                    {
+                        if (mySqlDataReader.Read())
+                        {
+                            EstPresent = true;
+                        }
+
+
+                        mySqlDataReader.Close();
+                    }
+
+                }
+            }
+            finally
+            {
+                if (mySqlCnn != null)
+                {
+                    mySqlCnn.Close();
+                }
+            }
+
+            return EstPresent;
+        }
+
+
+
+        /// <summary>
         /// Permettre de retourner la liste de cours pour un étudiant donné
         /// </summary>
         /// <returns></returns>

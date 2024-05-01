@@ -20,17 +20,22 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
         /// <param name="titre"></param>
         /// <returns></returns>
         [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Etudiant>> GetListEtudiantCours(int idCours)
+        public ActionResult<IEnumerable<Etudiant>> GetListEtudiantCours(string sigleCours, int idSession)
         {
             DAL dal = new DAL();
             try
             {
-                bool estPresent = dal.CSGPFact.GetCours(idCours);
+                bool estPresent = dal.CoursFact.GetCours(sigleCours);
                 if (estPresent)
                 {
-                    return dal.EtudiantFact.GetListEtudiantCours(idCours);
+                    List<Etudiant> listEtudiantsTest = dal.EtudiantFact.GetListEtudiantCours(sigleCours, idSession);
+
+                    if (listEtudiantsTest.Count > 0)
+                        return listEtudiantsTest;
+                    else
+                       return StatusCode(200, "Il y'a pas d'étudiants pour ce cours à cette session!");
                 }
-                return StatusCode(404, "Le cours n'existe pas.");
+                return StatusCode(404, "Ce cours n'existe pas !");
             }
             catch (Exception ex)
             {
@@ -132,11 +137,11 @@ namespace _2230912_2130331_Lab5Partie2.Controllers
 
                 List<Etudiant> etudiants = dal.EtudiantFact.GetEtudiantSelonDateDiplome(date);
 
-                if (etudiants != null)
+                if (etudiants.Count() != 0)
                 {
                     return etudiants;
                 }
-                return StatusCode(404, "Il n'y a pas de finissants pour cette année.");
+                return StatusCode(404, "Il n'y a pas de finissants pour cette date !.");
             }
             catch (Exception ex)
             {
